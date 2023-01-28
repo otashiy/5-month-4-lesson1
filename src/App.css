@@ -24,6 +24,18 @@
   color: white;
 }
 
+ul,ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
 .App-link {
   color: #61dafb;
 }

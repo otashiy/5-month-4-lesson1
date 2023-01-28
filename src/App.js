@@ -1,23 +1,23 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddPerson from './Screens/AddPerson/AddPerson';
+import Contact from './Screens/Contact/contact';
+import Main from './Screens/Main/main';
+import NotFound from './Screens/NotFound/NotFound';
+import OzodMe from './Screens/OzodMe/OzodMe';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Main />
+      <Routes>
+        <Route path='/' />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/ozod-me' element={<OzodMe />} />
+        <Route path='/add-person' element={<AddPerson />} />
+        <Route path='*' element={<NotFound />} />
+      </Routes>
     </div>
   );
 }
